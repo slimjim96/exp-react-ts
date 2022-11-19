@@ -1,9 +1,10 @@
 # Express & React Typescript Example App
 
+This is still a work in progress...
+
 ## Requirements
 
-- Docker
-- Docker compose
+- TBD
 
 ## Usage
 
