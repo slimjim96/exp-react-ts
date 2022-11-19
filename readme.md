@@ -21,9 +21,5 @@ $  docker build -t expreactapp .
 $  docker run -p:3002:3002 expreactapp
 ```
 
-Open `http://localhost:3002` and enjoy!
+Open `http://localhost:3002` and see how it goes...
 
-## Backend
-
-- Start server - `$ npm run server-dev`
-- Rebuild index.js - `$ webpack`
