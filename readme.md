@@ -25,9 +25,3 @@ Open `http://localhost:3000` and enjoy!
 
 - Start server - `$ npm run server-dev`
 - Rebuild index.js - `$ webpack`
-
-## Contributors
-
-- Creator of Goby @st0012
-- Sample APP Maintainer @Maxwell-Alexius
-- Logo Designer @steward
