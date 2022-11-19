@@ -21,7 +21,7 @@ $ docker-compose up
 
 Open `http://localhost:3000` and enjoy!
 
-## Frontend
+## Backend
 
 - Start server - `$ npm run server-dev`
 - Rebuild index.js - `$ webpack`
