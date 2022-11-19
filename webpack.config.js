@@ -7,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const outputDirectory = 'dist';
 
 module.exports = {
-    entry: ['babel-polyfill', './src/bp-emp-rx-app/index.tsx'],
+    entry: ['babel-polyfill', './src/exp-react-app-ts/index.tsx'],
     output: {
         path: path.join(__dirname, outputDirectory),
         filename: './js/[name].bundle.js'
@@ -35,6 +35,10 @@ module.exports = {
                 enforce: 'pre',
                 test: /\.js$/,
                 loader: 'source-map-loader'
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.less$/,
@@ -80,7 +84,7 @@ module.exports = {
         hot: true,
         proxy: {
             '/api/**': {
-                target: 'http://localhost:3000',
+                target: 'http://localhost:3002',
                 secure: false,
                 changeOrigin: true
             }
