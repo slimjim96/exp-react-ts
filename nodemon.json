@@ -3,10 +3,10 @@
     "**/*.test.ts",
     "**/*.spec.ts",
     "node_modules",
-    "src/exp-react-app"
+    "src/exp-react-app-ts"
   ],
   "watch": [
-    "src/exp-react-svc"
+    "src/exp-react-svc-ts"
   ],
   "exec": "tsc -p tsconfig.server.json && node exp-react-svc/",
   "ext": "ts"

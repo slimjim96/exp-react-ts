@@ -21,8 +21,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "./src/exp-react-app/*",
-    "./src/exp-react-svc/*"
+    "./src/exp-react-app-ts/*",
+    "./src/exp-react-svc-ts/*"
   ],
   "exclude":[
     "node_modules"

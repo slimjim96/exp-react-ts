@@ -16,9 +16,9 @@
   },
   "compileOnSave": true,
   "include": [
-    "./src/exp-react-svc"
+    "./src/exp-react-svc-ts"
   ],
   "exclude": [
-    "./src/exp-react-app"
+    "./src/exp-react-app-ts"
   ]
 }
