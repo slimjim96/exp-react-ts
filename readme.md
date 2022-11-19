@@ -10,7 +10,7 @@
 Clone it!
 
 ```
-$ git clone git@github.com:goby-lang/sample-web-app.git
+$ git clone git@github.com:slimjim96/exp-react-ts.git
 ```
 
 Go into the project directory and run the command (coming soon):
