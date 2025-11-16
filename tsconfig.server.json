@@ -1,24 +1,24 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 16",
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2019",
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022"],
+    "moduleResolution": "node",
+    "rootDir": "./src/exp-react-svc-ts",
+    "outDir": "./exp-react-svc",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
     "allowSyntheticDefaultImports": true,
-    "outDir": "./exp-react-svc",
-    "moduleResolution": "node",
-    "sourceMap": true
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "compileOnSave": true,
-  "include": [
-    "./src/exp-react-svc-ts"
-  ],
-  "exclude": [
-    "./src/exp-react-app-ts"
-  ]
+  "include": ["src/exp-react-svc-ts"],
+  "exclude": ["node_modules", "src/exp-react-app-ts"]
 }

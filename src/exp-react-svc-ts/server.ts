@@ -1,13 +1,16 @@
-import {Express} from "express";
+import { Express } from 'express';
 
 export class Server {
-    private app: Express;
+  private app: Express;
 
-    constructor(app: Express) {
-        this.app = app;
-    }
+  constructor(app: Express) {
+    this.app = app;
+  }
 
-    public start(port: number): void {
-        this.app.listen(port, () => console.log(`Server listening on port ${port}!`));
-    }
+  public start(port: number): void {
+    this.app.listen(port, () => {
+      console.log(`🚀 Server listening on http://localhost:${port}`);
+      console.log(`📦 API available at http://localhost:${port}/api`);
+    });
+  }
 }

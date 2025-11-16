@@ -1,32 +1,36 @@
 // Initialize process env variables
+import 'dotenv/config';
 
-import * as dotenv from 'dotenv';
+import { Server } from './server.js';
+import express, { Request, Response } from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Necessary to pass all environment variables
-dotenv.config();
-
-import {Server} from './server';
-import express, {NextFunction, Request, Response} from 'express';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
-const port = 3002;
+const port = Number(process.env.PORT) || 3002;
 
+console.log('Initializing web service...');
 
-console.log('init web service');
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.use(express.json()) // Setting JSON as our body-parsing function for PUT and POST requests
-    .use(express.urlencoded({extended: false}));
+// Serve static files from dist directory
+app.use(express.static(path.join(__dirname, '../../dist')));
 
+// API routes
+app.get('/api', (_req: Request, res: Response) => {
+  res.status(200).json({ health: 'OK' });
+});
+
+// Frontend route - must be last
+app.get('*', (_req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, '../../dist/index.html'));
+});
+
+// Start server
 const server = new Server(app);
 server.start(port);
-
-// Send index.html on root request
-app.use(express.static('dist'));
-app.use('/api', (req: Request, res: Response, next: NextFunction) => {
-    res.status(200).json({health: 'OK'});
-});
-
-// Front-end
-app.get('/', (req: Request, res: Response) => {
-    res.sendFile('/dist/index.html');
-});
