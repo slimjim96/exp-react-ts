@@ -1,29 +1,57 @@
-dist/
-.env
-exp-react-svc/
-
-.DS_STORE
+# Dependencies
 node_modules
-scripts/flow/*/.flowconfig
-.flowconfig
+
+# Build outputs
+dist/
+exp-react-svc/
+build/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+.vitest
+
+# Logs
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_STORE
+Thumbs.db
+
+# Misc
 *~
 *.pyc
 .grunt
 _SpecRunner.html
 __benchmarks__
-build/
 remote-repo/
-coverage/
 .module-cache
+chrome-user-data
+
+# Flow (legacy)
+scripts/flow/*/.flowconfig
+.flowconfig
 fixtures/dom/public/react-dom.js
 fixtures/dom/public/react.js
 test/the-files-to-test.generated.js
-*.log*
-chrome-user-data
-*.sublime-project
-*.sublime-workspace
-.idea/
-*.iml
-.vscode
-*.swp
-*.swo
